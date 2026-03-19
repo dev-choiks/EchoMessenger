@@ -32,6 +32,7 @@
             lstChat = new ListBox();
             txtInput = new TextBox();
             btnSend = new Button();
+            lblCount = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -49,7 +50,7 @@
             // 
             lstChat.Font = new Font("한컴 고딕", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 129);
             lstChat.FormattingEnabled = true;
-            lstChat.Location = new Point(30, 102);
+            lstChat.Location = new Point(30, 85);
             lstChat.Name = "lstChat";
             lstChat.Size = new Size(739, 262);
             lstChat.TabIndex = 1;
@@ -75,12 +76,23 @@
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
             // 
+            // lblCount
+            // 
+            lblCount.AutoSize = true;
+            lblCount.Font = new Font("한컴 말랑말랑 Bold", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            lblCount.Location = new Point(30, 350);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(174, 35);
+            lblCount.TabIndex = 4;
+            lblCount.Text = "현재 대화: 0개";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(800, 472);
+            Controls.Add(lblCount);
             Controls.Add(btnSend);
             Controls.Add(txtInput);
             Controls.Add(lstChat);
@@ -97,5 +109,6 @@
         private ListBox lstChat;
         private TextBox txtInput;
         private Button btnSend;
+        private Label lblCount;
     }
 }
