@@ -39,7 +39,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("한컴 말랑말랑 Bold", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            lblTitle.Location = new Point(30, 26);
+            lblTitle.Location = new Point(30, 21);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(344, 56);
             lblTitle.TabIndex = 0;
@@ -58,7 +58,7 @@
             // txtInput
             // 
             txtInput.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            txtInput.Location = new Point(30, 388);
+            txtInput.Location = new Point(30, 389);
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(586, 50);
             txtInput.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             btnSend.BackColor = Color.Yellow;
             btnSend.Font = new Font("한컴 말랑말랑 Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            btnSend.Location = new Point(622, 388);
+            btnSend.Location = new Point(622, 389);
             btnSend.Name = "btnSend";
             btnSend.Size = new Size(147, 50);
             btnSend.TabIndex = 3;
