@@ -20,6 +20,10 @@ namespace EchoMessenger
             //TextBox에 입력된 텍스트를 변수에 저장
             string typed_msg = txtInput.Text;
 
+            // 마지막 항목을 선택 상태로 만들어 자동으로 스크롤을 맨 밑으로 내림
+            lstChat.SelectedIndex = lstChat.Items.Count - 1;
+            lstChat.SelectedIndex = -1;
+
             //글자 수 50자 제한 검사 및 예외 처리
             if (typed_msg.Length > 50)
             {
@@ -94,6 +98,11 @@ namespace EchoMessenger
             lblCount.Text = $"현재 대화: {lstChat.Items.Count}개";
         }
 
-     
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Text = $"EchoMessenger";
+        }
+
+    
     }
 }
