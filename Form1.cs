@@ -20,6 +20,14 @@ namespace EchoMessenger
             //TextBox에 입력된 텍스트를 변수에 저장
             string typed_msg = txtInput.Text;
 
+            //글자 수 50자 제한 검사 및 예외 처리
+            if (typed_msg.Length > 50)
+            {
+                //더 이상 코드를 실행하지 않고 전송 차단
+                MessageBox.Show("메시지는 50자를 초과할 수 없습니다.");
+                return;
+            }
+
             // 공백만 있다면 더 이상 코드를 실행하지 않고 빠져나감
             if (string.IsNullOrWhiteSpace(typed_msg))
             {
@@ -59,5 +67,33 @@ namespace EchoMessenger
         {
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //예외 처리: ListBox에서 항목이 선택되어 있는지 확인
+            if (lstChat.SelectedIndex != -1)
+            {
+                //선택된 위치의 인덱스 항목을 제거
+                lstChat.Items.RemoveAt(lstChat.SelectedIndex);
+
+                //삭제 후 줄어든 개수 업데이트
+                lblCount.Text = $"현재 대화: {lstChat.Items.Count}개";
+            }
+            else
+            {
+                MessageBox.Show("삭제할 메시지를 먼저 선택해주세요.");
+            }
+        }
+
+        private void btnAllDelete_Click(object sender, EventArgs e)
+        {
+            // ListBox의 모든 항목을 한 번에 비움
+            lstChat.Items.Clear();
+
+            //모두 삭제되었으므로 개수를 업데이트
+            lblCount.Text = $"현재 대화: {lstChat.Items.Count}개";
+        }
+
+     
     }
 }

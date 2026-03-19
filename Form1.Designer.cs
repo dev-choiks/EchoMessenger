@@ -33,6 +33,8 @@
             txtInput = new TextBox();
             btnSend = new Button();
             lblCount = new Label();
+            btnDelete = new Button();
+            btnAllDelete = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -86,12 +88,36 @@
             lblCount.TabIndex = 4;
             lblCount.Text = "현재 대화: 0개";
             // 
+            // btnDelete
+            // 
+            btnDelete.Font = new Font("한컴 말랑말랑 Bold", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnDelete.Location = new Point(380, 21);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(167, 56);
+            btnDelete.TabIndex = 5;
+            btnDelete.Text = "삭제";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnAllDelete
+            // 
+            btnAllDelete.Font = new Font("한컴 말랑말랑 Bold", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnAllDelete.Location = new Point(553, 21);
+            btnAllDelete.Name = "btnAllDelete";
+            btnAllDelete.Size = new Size(160, 56);
+            btnAllDelete.TabIndex = 6;
+            btnAllDelete.Text = "대화 기록 삭제";
+            btnAllDelete.UseVisualStyleBackColor = true;
+            btnAllDelete.Click += btnAllDelete_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(800, 472);
+            Controls.Add(btnAllDelete);
+            Controls.Add(btnDelete);
             Controls.Add(lblCount);
             Controls.Add(btnSend);
             Controls.Add(txtInput);
@@ -110,5 +136,7 @@
         private TextBox txtInput;
         private Button btnSend;
         private Label lblCount;
+        private Button btnDelete;
+        private Button btnAllDelete;
     }
 }
