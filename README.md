@@ -22,9 +22,9 @@
 ![과제1 실행화면2](img/2.png)
 
 - 과제 내용
-  - Label(표시), TextBox(입력), Button(전송), ListBox(대화창)를 메신저 구조에 맞게 적절히 배치합니다.  
-  - 전송 버튼 클릭 시 TextBox의 텍스트를 ListBox의 항목(Items)으로 추가합니다.   
-  - 추가 직후 TextBox의 내용을 비워(Clear) 다음 입력을 준비합니다.   
+  - Label(표시), TextBox(입력), Button(전송), ListBox(대화창)를 메신저 구조에 맞게 적절히 배치 
+  - 전송 버튼 클릭 시 TextBox의 텍스트를 ListBox의 항목(Items)으로 추가
+  - 추가 직후 TextBox의 내용을 비워(Clear) 다음 입력을 준비
 
 - 구현 내용과 기능 설명
   - 화면 중앙에 채팅 기록이 보일 넓은 ListBox(lstChat)를 배치하고, 하단에 사용자가 메시지를 입력할 TextBox(txtInput)와 전송을 담당하는 Button(btnSend)을 배치하여 기초적인 윈도우 메신저 폼 레이아웃을 구성했습니다.   
